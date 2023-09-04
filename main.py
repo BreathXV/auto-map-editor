@@ -225,4 +225,48 @@ class Build:
         return closest_location
     
     def template(self, location):
-        pass
+        try:
+            if location not in locations:
+                m = print(f"{location} is not a valid location.")
+                return m
+            else:
+                location = location in locations
+                return location
+        except Exception as e:
+            print(f"Error collecting template: {e}")
+            pass
+        
+    def build(self, name, location, hat, mask, glasses, shirt, vest, gloves, pants, shoes, amount):
+        n = name
+        l = location
+        h = hat
+        m = mask
+        g = glasses
+        s = shirt
+        v = vest
+        gL = gloves
+        p = pants
+        sH = shoes
+        a = amount
+        
+        if isinstance([n, l], str):
+            if l in templates:
+                if isinstance([h, m, g, s, v, gL, p, sH], str):
+                    if isinstance(a, int):
+                        with open(f"./templates/{l}.json", 'r') as f:
+                            json = json.load(f)
+                        
+                        try:
+                            
+                    else:
+                        m = f"Amount isn't whole number."
+                        return print(m)
+                else:
+                    m = "One or more item(s) is not string."
+                    return print(m)
+            else:
+                m = "Location is not available to build."
+                return print(m)
+        else:
+            m = "Location and/or name is not string."
+            print(m)
