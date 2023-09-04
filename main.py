@@ -186,7 +186,8 @@ class Build:
         if not isinstance(amount, int) or (amount is not None):
             return "Amount has to be zero OR it has to be a whole number."
     
-    def dictionary()
+    def dictionary():
+        pass
         
     
     def haversine(self, lat1, lon1, lat2, lon2):
